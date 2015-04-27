@@ -1,0 +1,1 @@
+int comprobarPosicion(int,int *);
