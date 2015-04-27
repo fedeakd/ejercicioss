@@ -1,0 +1,3 @@
+
+
+int comprobar(int a);

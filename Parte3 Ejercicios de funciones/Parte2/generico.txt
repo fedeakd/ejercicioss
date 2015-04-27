@@ -1,0 +1,18 @@
+	int * fecha(){
+	int fecha[2],i;
+	for(i=0;i<2;i++){
+		fecha[i]=-1;
+	}
+	do{
+	
+	printf("Ingrese una fecha ej 12/12/12\n>");
+	scanf("%d/%d/%d",&fecha[0],&fecha[1],&fecha[2]);
+	fflush(stdin);
+	//printf("%d/%d/%d\n",fecha[0],fecha[1],fecha[2]);
+	if(( fecha[0]==-1)||(fecha[1]==-1)||(fecha[2]==-1)){
+		printf("Fecha incorrecta\n");
+	}}
+	while(( fecha[0]==-1)||(fecha[1]==-1)||(fecha[2]==-1));
+	//printf("%d/%d/%d",fecha[0],fecha[1],fecha[2]);
+	return fecha;
+}
