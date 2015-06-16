@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>libreria.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #000000; }
+.cpp1-assembler { color: #00FF00; }
+.cpp1-character { background-color: #000000; color: #FFFF00; }
+.cpp1-comment { background-color: #000000; color: #C0C0C0; font-style: italic; }
+.cpp1-float { color: #FF00FF; }
+.cpp1-hexadecimal { color: #FF00FF; }
+.cpp1-identifier { color: #FFFFFF; }
+.cpp1-illegalchar { background-color: #800000; color: #FFFF00; }
+.cpp1-number { color: #FF00FF; }
+.cpp1-octal { color: #FF00FF; }
+.cpp1-preprocessor { color: #008000; }
+.cpp1-reservedword { background-color: #000000; color: #00FF00; }
+.cpp1-space { background-color: #000000; color: #FFFFFF; }
+.cpp1-string { background-color: #000000; color: #FF8000; }
+.cpp1-symbol { color: #00FFFF; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 10pt Consolas;"><span class="cpp1-preprocessor">#include &quot;libreria.h&quot;
+</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> newArrayList</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">	ArrayList </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> pNum</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">=(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*)</span><span class="cpp1-identifier">malloc</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">sizeof</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">));
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">=(</span><span class="cpp1-reservedword">int</span><span class="cpp1-symbol">*)</span><span class="cpp1-identifier">malloc</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">sizeof</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">int</span><span class="cpp1-symbol">));
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">reservedSize</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	
+	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">add</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">add</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">set</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">set</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">removess</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">removess</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">push</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">push</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">indexOf</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">indexOf</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">sizee</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">sizee</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">contains</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">contains</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">isEmpty</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">isEmpty</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">containsAll</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">containsAll</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">clone</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">clone</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	pNum</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">subList</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">subList</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> pNum</span><span class="cpp1-symbol">;
+}
+
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> deleteArrayList</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-identifier">pNum</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	free</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">pNum</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	
+</span><span class="cpp1-symbol">}
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> add</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> pArray</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">void</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> aux</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">]=*((</span><span class="cpp1-reservedword">int</span><span class="cpp1-symbol">*)</span><span class="cpp1-identifier">aux</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	resizeUp</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">pArray</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">reservedSize</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	
+</span><span class="cpp1-symbol">}
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> removess</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> pArray</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> index</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">void</span><span class="cpp1-symbol">*</span><span class="cpp1-identifier">borrar</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	borrar</span><span class="cpp1-symbol">=(</span><span class="cpp1-reservedword">int</span><span class="cpp1-symbol">*)</span><span class="cpp1-identifier">pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-number">0</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">for</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">index</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">&gt;=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">--){
+</span><span class="cpp1-space">		pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">]=</span><span class="cpp1-identifier">pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">-</span><span class="cpp1-number">1</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">=&amp;</span><span class="cpp1-identifier">pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-number">1</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">	free</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">borrar</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">--;
+}
+
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> set</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> pArray</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> index</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">void</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> element</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">index</span><span class="cpp1-symbol">]=*((</span><span class="cpp1-reservedword">int</span><span class="cpp1-symbol">*)</span><span class="cpp1-identifier">element</span><span class="cpp1-symbol">);
+}
+
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> get</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> pArray</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> index</span><span class="cpp1-symbol">)
+{
+
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">index</span><span class="cpp1-symbol">];
+}
+
+
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> push</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> self</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> index</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">void</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> element</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	
+	</span><span class="cpp1-reservedword">for</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">&gt;=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">--){
+</span><span class="cpp1-space">		printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%d\n&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">&gt;=</span><span class="cpp1-identifier">index</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">			self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">]=</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">-</span><span class="cpp1-number">1</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">		</span><span class="cpp1-comment">//printf(&quot;%d\n&quot;,self-&gt;pElements[i]);
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">==</span><span class="cpp1-identifier">index</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">			self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">]=*((</span><span class="cpp1-reservedword">int</span><span class="cpp1-symbol">*)</span><span class="cpp1-identifier">element</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">			resizeUp</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	
+</span><span class="cpp1-symbol">}
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> indexOf</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> self</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">void</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> element</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">for</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">&lt;</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">++){
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">]==*((</span><span class="cpp1-reservedword">int</span><span class="cpp1-symbol">*)</span><span class="cpp1-identifier">element</span><span class="cpp1-symbol">)){
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">+</span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+}
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> sizee</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> self</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">for</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">&lt;</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">++){
+</span><span class="cpp1-space">	 </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">;
+}
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> contains</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> self</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">void</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> element</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">for</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">&lt;</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">++){
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">]==*((</span><span class="cpp1-reservedword">int</span><span class="cpp1-symbol">*)</span><span class="cpp1-identifier">element</span><span class="cpp1-symbol">)){
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+}
+
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> containsAll</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> self</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> auxSelf</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">!=</span><span class="cpp1-identifier">auxSelf</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">for</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">&lt;</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">++){
+</span><span class="cpp1-space">		
+		</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">]!=</span><span class="cpp1-identifier">auxSelf</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">]){
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">==</span><span class="cpp1-number">0</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+}
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> isEmpty</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> self</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">==</span><span class="cpp1-number">0</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+}
+
+</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> clone</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> self</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> self</span><span class="cpp1-symbol">;
+}
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> resizeUp</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> pArray</span><span class="cpp1-symbol">)
+{
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">void</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> tmp_ptr</span><span class="cpp1-symbol">;
+
+</span><span class="cpp1-space">	pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">++;
+</span><span class="cpp1-space">	
+	tmp_ptr</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">realloc</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">sizeof</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">int</span><span class="cpp1-symbol">)*(</span><span class="cpp1-identifier">pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">size</span><span class="cpp1-symbol">+</span><span class="cpp1-number">1</span><span class="cpp1-symbol">));
+
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">tmp_ptr </span><span class="cpp1-symbol">==</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">)</span><span class="cpp1-space"> </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">else</span><span class="cpp1-space"> </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">     	pArray</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> tmp_ptr</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}
+}</span><span class="cpp1-space">   
+ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> pop</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> self</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> index</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">void</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> a</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	a</span><span class="cpp1-symbol">=(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*)</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">index</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">	removess</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">index</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> a</span><span class="cpp1-symbol">;
+}
+
+</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> subList</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> self</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> from</span><span class="cpp1-symbol">,</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> to</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	ArrayList</span><span class="cpp1-symbol">*</span><span class="cpp1-space"> lista</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	lista</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">newArrayList</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> d</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">,*</span><span class="cpp1-identifier">aux</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">for</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">from</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">&lt;=</span><span class="cpp1-identifier">to</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">++){
+</span><span class="cpp1-space">		</span><span class="cpp1-comment">//lista-&gt;pElements[lista-&gt;size]=self-&gt;pElements[i];
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">*</span><span class="cpp1-identifier">aux</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">self</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">pElements</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">		add</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">lista</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">aux</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> lista</span><span class="cpp1-symbol">;
+}
+</span></span>
+</code></pre>
+</body>
+</html>

@@ -38,6 +38,6 @@ void mostrarEmpty(int empty){
 		printf("El array contiene elementos\n");
 		}
 	else{
-		printf("El array no contiene elementos\n");
+		printf("El array NO! contiene elementos\n");
 		}		
 }
