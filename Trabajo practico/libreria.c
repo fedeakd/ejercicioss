@@ -16,7 +16,9 @@ ArrayList* newArrayList(){
 	pList->containsAll=containsAll;
 	pList->clone=clone;
 	pList->subList=subList;
+	pList->pop=pop;
 	pList->get=get;
+	pList->ordenar=ordenar;
 	return pList;
 }
 void add(ArrayList* pArray,void* aux){
@@ -66,10 +68,10 @@ void push(ArrayList* self,int index,void* element){
 }
 
 void* pop(ArrayList* self,int index){
-	void* a;
-	a=self->pElements[index];
+	void* devu;
+	devu=self->pElements[index];
 	removess(self,index);
-	return a;
+	return devu;
 }
 int indexOf(ArrayList* self,void* element){
 	int i;
@@ -91,21 +93,26 @@ int contains(ArrayList* self,void* element){
 }
 
 int containsAll(ArrayList* self,ArrayList* auxSelf){
-	int i;
-	if(self->size!=auxSelf->size){
+	int i,g,ban=0;
+	if((self->size==0)||(auxSelf->size==0)){
 		return 0;
 	}
-	for(i=0;i<self->size;i++){
-		
-		if(*(int*)self->pElements[i]!=*(int*)auxSelf->pElements[i]){
-		return 0;
+	for(i=0;i<auxSelf->size;i++){
+		for(g=0;g<self->size;g++){
+			if(*(int*)self->pElements[g]==*(int*)auxSelf->pElements[i]){
+				ban++;
+				break;
+		}
 		}
 	}
-	if(self->size==0){
+	//printf("")
+	if(auxSelf->size==ban){
+	 return 1;	
+	}
+	else{
 		return 0;
 	}
-	return 1;
-	}
+}
 int sizee(ArrayList* self){
 	int i;
 	for(i=0;i<self->size;i++){
@@ -139,14 +146,31 @@ int resizeUp(ArrayList* pArray)
 
 	pArray->size++;
 	
-	tmp_ptr=realloc(pArray->pElements,sizeof(int)*(pArray->size+1));
-
-
-	if (tmp_ptr == NULL) {
+	pArray->pElements=realloc(pArray->pElements,sizeof(int)*(pArray->size+1));
+	return 0;
+}
+	/*if (tmp_ptr == NULL) {
 		return 0;
 	}
 	else {
      	pArray->pElements = tmp_ptr;
 		return 1;
 	}
-} 
+} */
+void clear(ArrayList* pArray){
+	free(pArray->pElements);
+	pArray->size=0;
+}
+void ordenar(ArrayList* pArray){
+	int aux,i,g;
+	void* p;
+	for(i=0;i<pArray->size-1;i++){
+		for(g=i+1;g<pArray->size;g++){
+			if((*(int*)pArray->pElements[i])>(*(int*)pArray->pElements[g])){
+				p=pArray->pElements[i];
+				pArray->pElements[i]=pArray->pElements[g];
+				pArray->pElements[g]=p;
+			}
+		}
+	}
+}

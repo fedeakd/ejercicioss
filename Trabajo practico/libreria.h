@@ -17,7 +17,7 @@ typedef struct ArrayList{
 	struct ArrayList*(*clone)();
 	struct ArrayList*(*subList)();
 	void*(*get)();
-	
+	void(*ordenar);
 	int(*indexOf)();
 	int(*sizee)();
 	int(*contains)();
@@ -43,4 +43,6 @@ int isEmpty(ArrayList* self);
 ArrayList* clone(ArrayList* self);
 ArrayList* subList(ArrayList* self,int from,int to);
 int resizeUp(ArrayList* pArray);
+void clear(ArrayList* pArray);
+void ordenar(ArrayList* pArray);
 

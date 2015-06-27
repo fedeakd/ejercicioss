@@ -5,18 +5,18 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int opc,i,*aux,index,from,to,a=sizeof(int);
+	int opc,i,*aux,index,from,to;
 	void*pAux;
 	char resp[2];
 	ArrayList* lista;
-	ArrayList* lista1,*lista3;
+	ArrayList* lista1;
 	lista1=newArrayList();
 	lista=newArrayList();
 	while(opc!=21){
 		do{
 			fflush(stdin);
-			printf("Elige una opcion:\n1.add\n2.deleteArray\n3.remove Elemento\n4.set\n5.push*\n6.pop*\n7.IndexOf\n8.size\n");
-			printf("9.contains\n10.containsAll\n11.isEmpaty\n12.clone\n13.subList\n14.clear*\n20.MOSTRAR\n21.Salir\n>");
+			printf("Elige una opcion:\n1.add\n2.deleteArray\n3.remove Elemento\n4.set\n5.push\n6.pop\n7.IndexOf\n8.size\n");
+			printf("9.contains\n10.containsAll\n11.isEmpaty\n12.clone\n13.subList\n14.clear\n15.Ordenar\n20.MOSTRAR\n21.Salir\n>");
 			scanf("%d",&opc);
 			fflush(stdin);
 			if((opc<1)||(opc>21)){
@@ -38,8 +38,9 @@ int main(int argc, char *argv[]) {
 				
 			case 2:
 				deleteArrayList(lista);
-				lista=newArrayList();
+				//lista=newArrayList();
 				printf("Array borrado\n");
+				exit(1);
 				break;
 			
 			case 3:
@@ -63,8 +64,9 @@ int main(int argc, char *argv[]) {
 				break;
 			case 6:
 				index=validarIndex(lista->size);
-				lista1->pElements=lista->pop(lista,index);
-				resizeUp(lista1);
+				aux=pop(lista,index);
+				printf("%d",*(int*)aux);
+				lista1->add(lista1,aux);
 				break;
 			case 7:
 				aux=(int*)malloc(sizeof(int));
@@ -80,7 +82,7 @@ int main(int argc, char *argv[]) {
 				mostrarContains(lista->contains(lista,aux));
 				break;
 			case 10: 
-				if(lista->containsAll(lista1,lista)==1){
+				if(lista->containsAll(lista,lista1)==1){
 					printf("Son iguales\n");
 				}
 				else{
@@ -97,17 +99,15 @@ int main(int argc, char *argv[]) {
 			case 13:
 				from=validarIndex(lista->size);
 				to=validarIndex(lista->size);
-				aux=(int*)malloc(sizeof(int));
-				*aux=0;
-				for(i=0;i<=to;i++){
-					add(lista1,aux);
-				}
 				lista1=lista->subList(lista,from,to);
 				break;
 			case 14:
-				break;	
+				clear(lista);
+				break;
+			case 15:
+				ordenar(lista);	
+				break;
 			case 20:
-				//aux=5;
 				for(i=0;i<lista->size;i++){
 					printf("%d\n",*(int*)lista->get(lista,i));
 				}
